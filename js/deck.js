@@ -816,56 +816,7 @@ var base = {
     action: true,
     relatedSuits: [],
     relatedCards: []
-  },
-  'FR54': {
-    id: 'FR54',
-    suit: 'wizard',
-    name: 'Jester',
-    strength: 3,
-    bonus: true,
-    penalty: false,
-    bonusScore: function (hand) {
-      var oddCount = 0;
-      for (const card of hand.nonBlankedCards()) {
-        if (card.strength % 2 === 1) {
-          oddCount++;
-        }
-      }
-      if (oddCount === hand.size()) {
-        return 50;
-      } else {
-        return (oddCount - 1) * 3;
-      }
-    },
-    relatedSuits: [],
-    relatedCards: []
-  },
-  'FR55': {
-    id: 'FR55',
-    suit: 'beast',
-    name: 'Phoenix',
-    strength: 14,
-    bonus: true,
-    penalty: true,
-    blankedIf: function (hand) {
-      return hand.containsSuit('flood');
-    },
-    relatedSuits: [],
-    relatedCards: []
-  },
-  'FR55P': {
-    id: 'FR55P',
-    suit: 'beast',
-    name: 'Phoenix (Promo)',
-    strength: 14,
-    bonus: true,
-    penalty: true,
-    blankedIf: function (hand) {
-      return hand.containsSuit('flood');
-    },
-    relatedSuits: [],
-    relatedCards: []
-  },
+  }
 };
 
 var cursedHoard = {
